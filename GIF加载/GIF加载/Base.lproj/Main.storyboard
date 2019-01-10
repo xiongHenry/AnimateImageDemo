@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GIF加载" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-jZ-xIB">
+                                <rect key="frame" x="77" y="505" width="33" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="NGh-NL-7L8"/>
+                                    <constraint firstAttribute="height" constant="30" id="hOd-rU-OE5"/>
+                                </constraints>
+                                <state key="normal" title="satrt"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDi-Se-NjT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKu-uW-ra2">
+                                <rect key="frame" x="242" y="505" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7UK-4Z-McX"/>
+                                    <constraint firstAttribute="width" constant="31" id="RYJ-U7-DBf"/>
+                                </constraints>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="btK-Es-VsI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZS2-kS-VzV">
+                                <rect key="frame" x="97.5" y="40" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="pNi-LK-6Ds"/>
+                                    <constraint firstAttribute="width" constant="180" id="t3q-ki-mIt"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thj-vf-SJI" customClass="XTAnimatedImageView" customModule="GIF加载" customModuleProvider="target">
+                                <rect key="frame" x="97.5" y="257" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="08z-xS-fya"/>
+                                    <constraint firstAttribute="width" constant="180" id="Dy2-ez-Y4a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zKu-uW-ra2" secondAttribute="bottom" constant="132" id="0TH-0P-KbI"/>
+                            <constraint firstItem="ZS2-kS-VzV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6kS-m9-Rqj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zKu-uW-ra2" secondAttribute="trailing" constant="102" id="8lR-sH-6Zi"/>
+                            <constraint firstItem="Qj3-jZ-xIB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="JFH-9T-IRh"/>
+                            <constraint firstItem="ZS2-kS-VzV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NQp-2i-0ZR"/>
+                            <constraint firstItem="thj-vf-SJI" firstAttribute="top" secondItem="ZS2-kS-VzV" secondAttribute="bottom" constant="37" id="Wac-vq-Eg7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qj3-jZ-xIB" secondAttribute="bottom" constant="132" id="oM3-Ku-7hr"/>
+                            <constraint firstItem="thj-vf-SJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vtj-59-Z6t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animatedImageView" destination="thj-vf-SJI" id="A1T-0J-xty"/>
+                        <outlet property="imageView" destination="ZS2-kS-VzV" id="w8l-tR-9VU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="109.29535232383809"/>
+        </scene>
+    </scenes>
+</document>
